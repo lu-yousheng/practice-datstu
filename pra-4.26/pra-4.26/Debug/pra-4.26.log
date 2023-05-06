@@ -1,0 +1,6 @@
+﻿  DList.c
+D:\practice-code\practice-datstu\pra-4.26\pra-4.26\DList.c(22,34): warning C4047: “函数”:“TypeNode”与“DListNode *”的间接级别不同
+D:\practice-code\practice-datstu\pra-4.26\pra-4.26\DList.c(22,29): warning C4024: “newNode”: 形参和实参 1 的类型不同
+D:\practice-code\practice-datstu\pra-4.26\pra-4.26\DList.c(34,36): warning C4047: “函数”:“TypeNode”与“DListNode *”的间接级别不同
+D:\practice-code\practice-datstu\pra-4.26\pra-4.26\DList.c(34,31): warning C4024: “newNode”: 形参和实参 1 的类型不同
+  pra-4.26.vcxproj -> D:\practice-code\practice-datstu\pra-4.26\Debug\pra-4.26.exe

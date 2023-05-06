@@ -1,2 +1,18 @@
-﻿  test.c
+﻿  SList.c
+D:\practice-code\practice-datstu\pra-4.23\pra-4.23\SList.c(24,18): warning C4133: “=”: 从“SLNode *”到“SLNode *”的类型不兼容
+D:\practice-code\practice-datstu\pra-4.23\pra-4.23\SList.c(43,21): warning C4133: “=”: 从“SLNode *”到“SLNode *”的类型不兼容
+D:\practice-code\practice-datstu\pra-4.23\pra-4.23\SList.c(45,23): warning C4133: “=”: 从“SLNode *”到“SLNode *”的类型不兼容
+D:\practice-code\practice-datstu\pra-4.23\pra-4.23\SList.c(53,25): warning C4133: “=”: 从“SLNode *”到“SLNode *”的类型不兼容
+D:\practice-code\practice-datstu\pra-4.23\pra-4.23\SList.c(62,20): warning C4133: “=”: 从“SLNode *”到“SLNode *”的类型不兼容
+D:\practice-code\practice-datstu\pra-4.23\pra-4.23\SList.c(75,1): warning C4133: “初始化”: 从“SLNode *”到“SLNode *”的类型不兼容
+D:\practice-code\practice-datstu\pra-4.23\pra-4.23\SList.c(80,25): warning C4028: 形参 1 与声明不同
+D:\practice-code\practice-datstu\pra-4.23\pra-4.23\SList.c(88,18): warning C4133: “=”: 从“SLNode *”到“SLNode *”的类型不兼容
+D:\practice-code\practice-datstu\pra-4.23\pra-4.23\SList.c(113,27): warning C4133: “!=”: 从“SLNode *”到“SLNode *”的类型不兼容
+D:\practice-code\practice-datstu\pra-4.23\pra-4.23\SList.c(115,20): warning C4133: “=”: 从“SLNode *”到“SLNode *”的类型不兼容
+D:\practice-code\practice-datstu\pra-4.23\pra-4.23\SList.c(107,1): warning C4133: “初始化”: 从“SLNode *”到“SLNode *”的类型不兼容
+D:\practice-code\practice-datstu\pra-4.23\pra-4.23\SList.c(135,27): warning C4133: “=”: 从“SLNode *”到“SLNode *”的类型不兼容
+D:\practice-code\practice-datstu\pra-4.23\pra-4.23\SList.c(140,27): warning C4133: “!=”: 从“SLNode *”到“SLNode *”的类型不兼容
+D:\practice-code\practice-datstu\pra-4.23\pra-4.23\SList.c(142,20): warning C4133: “=”: 从“SLNode *”到“SLNode *”的类型不兼容
+D:\practice-code\practice-datstu\pra-4.23\pra-4.23\SList.c(144,23): warning C4133: “=”: 从“SLNode *”到“SLNode *”的类型不兼容
+D:\practice-code\practice-datstu\pra-4.23\pra-4.23\SList.c(145,23): warning C4133: “=”: 从“SLNode *”到“SLNode *”的类型不兼容
   pra-4.23.vcxproj -> D:\practice-code\practice-datstu\pra-4.23\Debug\pra-4.23.exe

@@ -1,19 +1,19 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include"SList.h"
-SLNode* need_malloc(SLNode** newdata, typeNode x)
+SLNode* need_malloc(SLNode* newdata, typeNode x)
 {
-	*newdata = (SLNode*)malloc(sizeof(SLNode));
-	if (*newdata != NULL)
+	newdata = (SLNode*)malloc(sizeof(SLNode));
+	if (newdata != NULL)
 	{
-		(*newdata)->val = x;
-		(*newdata)->next = NULL;
+		newdata->val = x;
+		newdata->next = NULL;
 	}
 	else
 	{
 		perror("malloc");
 		exit(-1);
 	}
-	return *newdata;
+	return newdata;
 }
 void SLNodePrint(SLNode* plist)
 {
@@ -30,7 +30,7 @@ void SLNodePrint(SLNode* plist)
 void SLNodeAddEnd(SLNode** pphead, typeNode x)
 {
 	SLNode* newdata = NULL;
-	newdata = need_malloc(&newdata, x);
+	newdata = need_malloc(newdata, x);
 	if (*pphead == NULL)
 	{
 		*pphead = newdata;
@@ -49,7 +49,7 @@ void SLNodeAddEnd(SLNode** pphead, typeNode x)
 void SLNodeAddFront(SLNode** pplist, typeNode x)
 {
 	SLNode* newdata = NULL;
-	newdata = need_malloc(&newdata, x);
+	newdata = need_malloc(newdata, x);
 	newdata->next = *pplist;
 	*pplist = newdata;
 }
@@ -77,15 +77,15 @@ void SLNodeDeletFron(SLNode** pplist)
 	*pplist = next;
 }
 
-SLNode* Findval(SLNode** pos,typeNode x)
+SLNode* Findval(SLNode* pos,typeNode x)
 {
-	while (*pos != NULL)
+	while (pos != NULL)
 	{
-		if ((*pos)->val == x)
+		if (pos->val == x)
 		{
-			return *pos;
+			return pos;
 		}
-		*pos = (*pos)->next;
+		pos = pos->next;
 	}
 	return NULL;
 }
@@ -94,7 +94,7 @@ void SLNodeDeletFind(SLNode** pplist, typeNode x)
 {
 	SLNode* pos = *pplist;
 	SLNode* cur = *pplist;
-	pos = Findval(&pos, x);
+	pos = Findval(pos, x);
 
 	if (pos)
 	{
@@ -125,11 +125,11 @@ void SLNodeAddFind(SLNode** pplist, typeNode x, typeNode y)
 {
 	SLNode* pos = *pplist;
 	SLNode* cur = *pplist;
-	pos = Findval(&pos, x);
+	pos = Findval(pos, x);
 	if (pos)
 	{
 		SLNode* newdata = NULL;
-		newdata = need_malloc(&newdata, y);
+		newdata = need_malloc(newdata, y);
 		if (pos == *pplist)
 		{
 			newdata->next = *pplist;
