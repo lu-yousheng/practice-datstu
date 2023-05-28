@@ -64,10 +64,11 @@ void BTreePush(BinaryTree* pbt, TreeType val)
 	AdjustUp(pbt->arry,pbt->size-1);
 }
 
-void AdjustDown(TreeType* arry,int size)
+void AdjustDown(TreeType* arry,int size,int begin)
 {
-	int parent = 0;
+	int parent = begin;
 	int child = parent * 2 + 1;
+	//循环中改变大于小于则是改变大小堆的改变
 	while (child <=size )
 	{
 		if ((arry[child] < arry[child + 1]) && child+1<=size)
@@ -87,10 +88,46 @@ void BTreePop(BinaryTree* pbt)
 	assert(pbt);
 	Swap(&pbt->arry[pbt->size - 1], &pbt->arry[0]);
 	pbt->size--;
-	AdjustDown(pbt->arry,pbt->size-1);
+	AdjustDown(pbt->arry,pbt->size-1,0);
 }
 TreeType BTreeTop(BinaryTree* pbt)
 {
 	assert(pbt);
 	return pbt->arry[0];
+}
+
+void HeapCreate(BinaryTree* pbt, TreeType* a, int n)
+{
+
+	assert(pbt);
+	//将数组a中的数据复制到堆pbt上
+	pbt->arry = (TreeType*)malloc(sizeof(TreeType) * n);
+	if (pbt->arry == NULL)
+	{
+		perror("malloc");
+		exit(-1);
+	}
+	memcpy(pbt->arry, a, sizeof(TreeType) * n);
+	pbt->capacity = pbt->size = n;
+	
+	//建堆算法
+	int parents = (n - 1 - 1) / 2;
+	for (int i = 0;i <= (n - 1 - 1) / 2;i++)
+	{
+		AdjustDown(pbt->arry, pbt->size - 1, parents);
+		parents--;
+	}
+
+}
+
+void HeapSort(BinaryTree* pbt)
+{
+	assert(pbt);
+	int newsize = pbt->size;
+	while (newsize!=0)
+	{
+		Swap(&pbt->arry[0], &pbt->arry[newsize - 1]);
+		newsize--;
+		AdjustDown(pbt->arry, newsize - 1, 0);
+	}
 }
